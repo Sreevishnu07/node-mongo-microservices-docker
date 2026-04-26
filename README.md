@@ -1,6 +1,7 @@
 # nginx-node-mongo-docker-compose
 
 ## What I Implemented
+  ### * (To be frank this would go close to my heart,though i havent learnt full-stack in depths this actually gave me a great understanding of how beautiful it actually is)
 
 * Configured MongoDB connection in Node.js using **environment variables via Docker Compose (.env)**.
 * Enabled **inter-container communication** using Docker service names (e.g., `mongodb` as DB host).
