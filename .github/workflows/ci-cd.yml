@@ -112,15 +112,13 @@ jobs:
 
       - name: Build backend image
         run: |
-         docker build \
-         --cache-from ${{ secrets.DOCKER_USERNAME }}/backend:latest \
+         docker build --cache-from ${{ secrets.DOCKER_USERNAME }}/backend:latest \
           -t ${{ secrets.DOCKER_USERNAME }}/backend:latest \
           -t ${{ secrets.DOCKER_USERNAME }}/backend:${{ steps.vars.outputs.TAG }} ./backend
 
       - name: Build frontend image
         run: |
-          docker build \
-          --cache-from ${{ secrets.DOCKER_USERNAME }}/frontend:latest \
+          docker build --cache-from ${{ secrets.DOCKER_USERNAME }}/frontend:latest \
           -t ${{ secrets.DOCKER_USERNAME }}/frontend:latest \
           -t ${{ secrets.DOCKER_USERNAME }}/frontend:${{ steps.vars.outputs.TAG }} ./frontend
 
